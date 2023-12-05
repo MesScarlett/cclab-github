@@ -71,13 +71,14 @@ a {
   position: relative;
   color: white;
   font-family: 'Times New Roman', Times, serif;
-  margin: 0%;
+  margin: 3%;
   padding: 1%;
-  width: 85%;
-  height: 10%;
+  width: 91%;
+  height: 4%;
   display: inline-block;
   justify-content: center;
   text-align: center;
+  border-style: dashed;
   border-color: white;
 }
 
@@ -137,10 +138,12 @@ a {
 }
 
 .main-container {
+  margin: 7%;
   background-color: lightgray;
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .interface-container {

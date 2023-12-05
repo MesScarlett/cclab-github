@@ -11,6 +11,7 @@ let b = 0;
 let rChange = false;
 let gChange = false;
 let bChange = false;
+let BChange = false;
 
 function preload() {
 
@@ -26,41 +27,51 @@ function preload() {
 
 function setup() {
   angleMode(DEGREES);
-  let cvs = createCanvas(800, 700);
+  let cvs = createCanvas(700, 600);
   cvs.parent("canvas-container")
   playlist[0].play();
   amplitude = new p5.Amplitude();
   fft = new p5.FFT(0.8, 64);
   //button for music
-  button1 = createButton("light");
+  button1 = createButton("💡light💡");
   button1.mousePressed(music1);
   button1.position(350, 570);
-  button2 = createButton("piano");
+  button2 = createButton("🎹piano🎹");
   button2.mousePressed(music2);
   button2.position(350, 600);
-  button3 = createButton("rain");
+  button3 = createButton("💧rain💧");
   button3.mousePressed(music3);
   button3.position(350, 630);
-  button4 = createButton("guidance");
+  button4 = createButton("🔈guidance🔈");
   button4.mousePressed(music4);
   button4.position(350, 660);
-  button5 = createButton("lullaby");
+  button5 = createButton("👶lullaby👶");
   button5.mousePressed(music5);
   button5.position(350, 690);
-  button6 = createButton("active");
+  button6 = createButton("😊active😊");
   button6.mousePressed(music6);
   button6.position(350, 720);
 
   //button for color change
   button7 = createButton("red-ish");
   button7.mousePressed(color1);
+  button7.style('background-color', '#ff0000');
   button7.position(350, 460);
   button8 = createButton("green-ish");
   button8.mousePressed(color2);
+  button8.style('background-color', '#00ff00');
   button8.position(350, 490);
   button9 = createButton("blue-ish");
   button9.mousePressed(color3);
   button9.position(350, 520);
+  button9.style('color', '#ffffff');
+  button9.style('background-color', '#0000ff');
+  button10 = createButton("black");
+  button10.mousePressed(color4);
+  button10.position(350, 430);
+  button10.style('color', ' #ffffff');
+  button10.style('background-color', '#000000');
+
 
 }
 
@@ -140,7 +151,7 @@ function music6() {
 function color1() {
   if (!rChange) {
     rChange = true;
-    gChange = bChange = false;
+    BChange = gChange = bChange = false;
   }
 }
 
@@ -148,7 +159,7 @@ function color1() {
 function color2() {
   if (!gChange) {
     gChange = true;
-    rChange = bChange = false;
+    BChange = rChange = bChange = false;
   }
 }
 
@@ -156,7 +167,14 @@ function color2() {
 function color3() {
   if (!bChange) {
     bChange = true;
-    rChange = gChange = false;
+    BChange = rChange = gChange = false;
+  }
+}
+
+function color4() {
+  if (!BChange) {
+    BChange = true;
+    bChange = rChange = gChange = false;
   }
 }
 
@@ -172,6 +190,9 @@ function draw() {
 
   else if (bChange == true) {
     b = 30 + random(-10, 10); r = g = 3;
+  }
+  else if (BChange == true) {
+    b = r = g = 0;
   }
   else {
     r = g = b = 0;
