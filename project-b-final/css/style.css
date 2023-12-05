@@ -1,0 +1,167 @@
+html {
+  height: 100%;
+
+}
+
+#body1 {
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+#body2 {
+  margin: 0%;
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+}
+
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: white;
+}
+
+.link1 {
+  color: white;
+}
+
+
+.image {
+  position: relative;
+  display: inline-block;
+  margin: 5%;
+  padding: 0%;
+}
+
+.title {
+  position: relative;
+  width: 97%;
+  margin: 3%;
+  height: 45%;
+  display: flex;
+  font-family: 'Times New Roman', Times, serif;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.instruction {
+  position: relative;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0%;
+  padding: 1%;
+  width: 85%;
+  height: 10%;
+  display: inline-block;
+  justify-content: center;
+  text-align: center;
+  border-color: white;
+}
+
+.bg {
+  position: relative;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 4%;
+  padding: 3%;
+  width: 85%;
+  height: 20%;
+  display: inline-block;
+  justify-content: center;
+  text-align: center;
+  border-style: dashed;
+  border-color: white;
+}
+
+.intro {
+  position: relative;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 5%;
+  padding: 2%;
+  width: 90%;
+  height: 50%;
+  display: inline-block;
+  justify-content: center;
+  text-align: center;
+  border-style: dashed;
+  border-color: white;
+
+}
+
+.author {
+  position: relative;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 5%;
+  padding: 2%;
+  width: 50%;
+  height: 40%;
+  display: inline-block;
+  justify-content: center;
+  text-align: center;
+  border-style: dashed;
+  border-color: white;
+
+}
+
+.all {
+  display: flex;
+  margin: 3%;
+  padding: 0%;
+  width: 90%;
+  justify-content: center;
+}
+
+.main-container {
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.interface-container {
+  background-color: gray;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* FLEXBOX PROPERTIES */
+/* 
+flex-direction
+flex-wrap
+flex-flow
+justify-content
+align-items
+align-content
+*/
+#canvas-container {
+  position: absolute;
+  left: 450px;
+  top: 100px;
+}

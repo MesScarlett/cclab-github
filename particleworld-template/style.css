@@ -1,0 +1,15 @@
+html,
+body {
+
+  align-items: center;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+}
+
+
+canvas {
+  display: block;
+}
